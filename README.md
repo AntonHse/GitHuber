@@ -6,6 +6,7 @@
 3. Enjoy!
 
 ## About
+* **UI** : [Texture](https://texturegroup.org/docs/getting-started.html)
 * **Network layer** : Custom based on URLSession
 * **Storage** : Keychain, UserDefaults
 * **Architecture** : CLEAN (VIP with circular dependency + Router + Assembly), MVP
