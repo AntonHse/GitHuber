@@ -165,6 +165,17 @@ extension RepositoryDetailsVC: ASCollectionDelegateFlowLayout, ASCollectionDeleg
         guard section == 1 else { return ASSizeRangeMake(CGSize(width: 0, height: 0)) } // TODO: Section universal
         return ASSizeRangeMake(CGSize(width: collectionNode.bounds.size.width, height: 55))
     }
+    
+    func collectionView(_ collectionView: ASCollectionView,
+                        constrainedSizeForNodeAt indexPath: IndexPath) -> ASSizeRange {
+        let maxHeight = CGFloat.greatestFiniteMagnitude
+        let itemWidth: CGFloat = view.frame.width
+        let minSize = CGSize(width: itemWidth, height: 0)
+        let maxSize = CGSize(width: itemWidth, height: maxHeight)
+        let sizeRange = ASSizeRangeMake(minSize, maxSize)
+
+        return sizeRange
+    }
 }
 
 // MARK: - LinkDelegate
